@@ -8,7 +8,7 @@ const Form = (props) => {
 
     const submitForm = (event) => {
         event.preventDefault();
-
+		props.submit();
     }
 
     const removeList = () => {

@@ -64,7 +64,7 @@ class App extends Component {
 			<div className = "container" >
 				<Header / >
 				<br />
-				<Form description={this.state.description} onChange={this.handleChangeDescription} />
+				<Form description={this.state.description} onChange={this.handleChangeDescription} submit={this.submitList} />
 				<br />
 				<List list={this.state.list} / >
 			</div>
