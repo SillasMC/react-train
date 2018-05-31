@@ -37,7 +37,9 @@ class App extends Component {
 	}
 
 	removerTodaList = () => {
-
+		this.setState({
+			list: []
+		})
 	}
 
 	deleteElement = (id) => {
@@ -64,7 +66,7 @@ class App extends Component {
 			<div className = "container" >
 				<Header / >
 				<br />
-				<Form description={this.state.description} onChange={this.handleChangeDescription} submit={this.submitList} />
+				<Form description={this.state.description} onChange={this.handleChangeDescription} submit={this.submitList} remove={this.removerTodaList} />
 				<br />
 				<List list={this.state.list} / >
 			</div>

@@ -12,7 +12,7 @@ const Form = (props) => {
     }
 
     const removeList = () => {
-
+		props.remove();
     }
 
     return (
