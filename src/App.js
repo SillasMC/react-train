@@ -8,12 +8,15 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-
+			list: [],
+			description: ''
 		}
 	}
 
 	handleChangeDescription = (value) => {
-
+		this.setState({
+			description: value
+		});
 	}
 
 	submitList = () => {
@@ -61,9 +64,9 @@ class App extends Component {
 			<div className = "container" >
 				<Header / >
 				<br />
-				<Form / >
+				<Form description={this.state.description} onChange={this.handleChangeDescription} />
 				<br />
-				<List / >
+				<List list={this.state.list} / >
 			</div>
 		);
 	}

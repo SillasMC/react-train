@@ -10,6 +10,9 @@ class List extends Component {
     }
 
     colunaLista = () => {
+		return this.props.list.map(element =>
+					(<ListColuna key={element.id} {...element} />)
+				);
     }
 
     render() {
@@ -24,8 +27,7 @@ class List extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {/*this.colunaLista()*/}
-                    <ListColuna />
+                    {this.colunaLista()}
                 </tbody>
             </table>
 

@@ -3,7 +3,7 @@ import React from 'react'
 const Form = (props) => {
 
     const handleChangeDescription = (event) => {
-
+		props.onChange(event.target.value);
     }
 
     const submitForm = (event) => {
@@ -12,7 +12,7 @@ const Form = (props) => {
     }
 
     const removeList = () => {
-        
+
     }
 
     return (
